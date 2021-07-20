@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box-making</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="people">
+  <div class="lists">
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+  </div>
+</div>
+
+
+  <script>
+console.log('hello World')
+
+    const text = `{
+	  "employees": [{
+			"fname": "Esme",
+			"lname": "Sanchez",
+			"id": 1892038,
+			"isTherapist": true
+    },
+  {
+			"fname": "Rick",
+			"lname": "Jeps",
+			"id": "1894024",
+			"isTherapist": "false"
+		},
+
+		{
+			"fname": "Angie",
+			"lname": "Lange",
+			"id": "1982403",
+			"isTherapist": "false"
+		},
+
+		{
+			"fname": "Renat",
+			"lname": "Gros",
+			"id": "1894039",
+			"isTherapist": "true"
+		},
+
+		{
+			"fname": "Bettino",
+			"lname": "Yang",
+			"id": "3789204",
+			"isTherapist": "true"
+		}]
+  }`
+
+console.log(text);
+const obj = JSON.parse(text);
+document.getElementById("demo").innerHTML = obj.employees[0].lname + ", " + obj.employees[0].fname;
+const obj1 = JSON.parse(text);
+document.getElementById("demo1").innerHTML = obj.employees[1].lname + ", " + obj.employees[1].fname;
+const obj2 = JSON.parse(text);
+document.getElementById("demo2").innerHTML = obj.employees[2].lname + ", " + obj.employees[2].fname;
+const obj3 = JSON.parse(text);
+document.getElementById("demo3").innerHTML = obj.employees[3].lname + ", " + obj.employees[3].fname;
+const obj4 = JSON.parse(text);
+document.getElementById("demo4").innerHTML = obj.employees[4].lname + ", " + obj.employees[4].fname;
+
+
+
+
+</script>
+</body>
+</html>
